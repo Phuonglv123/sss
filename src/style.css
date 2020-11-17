@@ -1,8 +1,730 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-a {
-  @apply text-white;
+.wrapper {
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
+
+.king-header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 9;
+}
+.king-header .king-logo img {
+  width: 200px;
+}
+
+.king-banner {
+  background-image: url("./assets/backgroud-banner.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+  position: relative;
+  clear: both;
+}
+.king-banner .king-banner-text {
+  position: absolute;
+  display: block;
+  left: 5rem;
+  top: 12rem;
+  visibility: visible;
+  width: 40%;
+}
+.king-banner .king-banner-text .king-banner-title span {
+  background-image: linear-gradient(to bottom, #674a07 0%, #fff6a2 40%, #fff6a2 60%, #674a07 100%);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  font-size: 35px;
+  font-weight: bold;
+}
+.king-banner .king-banner-text .king-banner-desc {
+  color: #fcf9cc;
+  font-size: 1rem;
+}
+.king-banner .king-banner-text .king-banner-button {
+  margin-top: 2rem;
+}
+.king-banner .king-banner-text .king-banner-button button {
+  padding: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  background: linear-gradient(to bottom, #e0bb4c 0%, #fff6a2 40%, #fff6a2 60%, #e0bb4c 100%);
+}
+
+.king-banner-static {
+  position: absolute;
+  border: solid 4px transparent;
+  background-image: linear-gradient(#191919, #191919), radial-gradient(circle at bottom, #674a07 0%, #fff6a2 40%, #fff6a2 60%, #674a07 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  border-radius: 20px;
+  height: 150px;
+  color: white;
+  background-color: #191919;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2px;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  @apply grid grid-cols-4 gap-5;
+}
+.king-banner-static .king-col-static {
+  border-right: 1px solid #f0d088;
+  text-align: center;
+  margin-top: 25px;
+  line-height: 35px;
+}
+.king-banner-static .king-col-static .static-number span {
+  font-size: 30px;
+  font-weight: bold;
+  color: #ab7a03;
+  line-height: 25px;
+}
+.king-banner-static .king-col-static .static-tetx {
+  color: #fcf9cc;
+  font-size: 1.6rem;
+}
+.king-banner-static .king-col-static:last-child {
+  border-right: none;
+}
+
+.king-reason {
+  background-image: url("./assets/backgroud-reason.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  clear: both;
+}
+.king-reason .container {
+  margin: 0 auto;
+}
+.king-reason .king-reason-logo {
+  text-align: center;
+  padding-top: 6em;
+  padding-bottom: 3em;
+}
+.king-reason .king-reason-logo img {
+  width: 350px;
+  margin: 0 auto;
+}
+.king-reason .king-reason-row {
+  @apply grid grid-cols-3 gap-4;
+}
+.king-reason .king-reason-row .king-reason-col {
+  background-image: url("./assets/backgroud-reason-col.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 25px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.king-reason .king-reason-row .king-reason-col .king-reason-icon img {
+  width: 60%;
+}
+.king-reason .king-reason-row .king-reason-col .king-reason-text span {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.king-platforms {
+  background-image: url("./assets/zfg.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+  z-index: 9;
+  width: 100%;
+  padding-top: 11rem;
+  margin-top: -8rem;
+}
+.king-platforms .container {
+  margin: 0 auto;
+}
+.king-platforms .king-platforms-title {
+  text-align: center;
+  max-width: 30rem;
+  margin: 0 auto;
+}
+.king-platforms .king-platforms-title span {
+  font-size: 2.2rem;
+  line-height: 1.5rem;
+  background-image: linear-gradient(to right, #dcb83b 0%, #d7aa28 40%, #ca9c1a 60%, #caaa34 100%);
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+.king-platforms .king-platforms-desc {
+  text-align: center;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  max-width: 45rem;
+  margin: 0 auto;
+}
+.king-platforms .king-platforms-desc p {
+  color: #f0d088;
+  font-size: 1rem;
+}
+.king-platforms .king-platform-feature {
+  border: solid 4px transparent;
+  background-image: linear-gradient(#191919, #191919), radial-gradient(circle at bottom, #674a07 0%, #fff6a2 40%, #fff6a2 60%, #674a07 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  border-radius: 20px;
+  height: 150px;
+  color: white;
+  background-color: #191919;
+  width: 90%;
+  margin: 0 auto;
+}
+.king-platforms .king-platform-feature .king-platforms-feature-title {
+  text-align: center;
+}
+.king-platforms .king-platform-feature .king-platforms-feature-title span {
+  font-size: 1.6rem;
+  background-image: linear-gradient(to right, #dcb83b 0%, #d7aa28 40%, #ca9c1a 60%, #caaa34 100%);
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  font-weight: bold;
+}
+.king-platforms .king-platform-feature .king-feature-row {
+  @apply grid grid-cols-4 gap-5;
+}
+.king-platforms .king-platform-feature .king-feature-row .king-feature-col {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-right: 1px solid #f0d088;
+  margin-top: 15px;
+}
+.king-platforms .king-platform-feature .king-feature-row .king-feature-col:last-child {
+  border-right: none;
+}
+.king-platforms .king-platform-feature .king-feature-row .king-feature-col .king-feature-col-text span {
+  font-size: 1rem;
+}
+.king-platforms .king-platform-feature .king-feature-row .king-feature-col .king-feature-col-icon {
+  text-align: center;
+}
+.king-platforms .king-platform-feature .king-feature-row .king-feature-col .king-feature-col-icon img {
+  width: 40%;
+}
+.king-platforms .king-platform-device {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.king-platforms .king-platform-device img {
+  width: 55%;
+  margin: 0 auto;
+  display: block;
+}
+
+.king-option .king-option-row {
+  align-items: center;
+  @apply grid grid-cols-2 gap-3;
+}
+.king-option .king-option-row .king-option-left img {
+  width: 100%;
+}
+.king-option .king-option-row .king-option-right {
+  padding: 3rem;
+}
+.king-option .king-option-row .king-option-right .king-option-right-title {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.king-option .king-option-row .king-option-right .king-option-right-title span:first-child {
+  font-size: 3rem;
+  color: #e8b12a;
+  font-weight: bold;
+  word-spacing: 1.3rem;
+}
+.king-option .king-option-row .king-option-right .king-option-right-title span:last-child {
+  font-size: 4.5rem;
+  color: #e8b12a;
+  font-weight: bold;
+}
+.king-option .king-option-row .king-option-right .king-option-right-row .king-option-right-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+.king-option .king-option-row .king-option-right .king-option-right-row .king-option-right-col .option-right-col-img img {
+  width: 100%;
+}
+.king-option .king-option-row .king-option-right .king-option-right-row .king-option-right-col .option-right-col-text {
+  margin-left: 1.5rem;
+}
+.king-option .king-option-row .king-option-right .king-option-right-row .king-option-right-col .option-right-col-text .text-title span {
+  font-size: 25px;
+  color: #f0d088;
+}
+.king-option .king-option-row .king-option-right .king-option-right-row .king-option-right-col .option-right-col-text .text-desc {
+  font-size: 20px;
+}
+
+.king-ready {
+  background-image: url("./assets/backgroud-ready.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.king-ready .container {
+  margin: 0 auto;
+}
+.king-ready .king-ready-title {
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.king-ready .king-ready-title span {
+  font-size: 4rem;
+  font-weight: bold;
+  background-image: linear-gradient(to right, #debe44 0%, #d7ac2a 40%, #c8a52c 60%, #d4cf69 100%);
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+.king-ready .king-ready-col {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  text-align: center;
+  margin: 0 auto;
+}
+.king-ready .king-ready-col hr {
+  width: 30%;
+  background-color: transparent;
+  color: #f0d088;
+  border: 2px dashed;
+}
+.king-ready .king-ready-col .king-ready-icon img {
+  margin: 0 auto;
+}
+.king-ready .king-ready-col .king-ready-icon .king-ready-text span {
+  font-size: 2rem;
+  background-image: linear-gradient(to right, #dcb83b 0%, #d7aa28 40%, #ca9c1a 60%, #caaa34 100%);
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+.king-ready .king-ready-col .king-ready-icon .king-ready-text p {
+  font-size: 1rem;
+  color: white;
+}
+.king-ready .king-ready-button {
+  text-align: center;
+  margin-top: 2rem;
+}
+.king-ready .king-ready-button button {
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 2.25rem !important;
+  padding: 1rem 2rem;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  background: linear-gradient(to bottom, #e0bb4c 0%, #fff6a2 40%, #fff6a2 60%, #e0bb4c 100%);
+}
+
+.king-broker .container {
+  margin: 0 auto;
+}
+.king-broker .king-broker-title {
+  text-align: center;
+}
+.king-broker .king-broker-title span {
+  font-size: 2.5rem;
+  font-weight: bold;
+  word-spacing: 1rem;
+  background-image: linear-gradient(to right, #debe44 0%, #d7ac2a 40%, #c8a52c 60%, #d4cf69 100%);
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+.king-broker .king-broker-desc {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1rem;
+  word-spacing: 0.5rem;
+}
+.king-broker .king-broker-row {
+  @apply grid grid-cols-2 gap-20;
+}
+.king-broker .king-broker-row .king-broker-col {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.king-broker .king-broker-row .king-broker-col .king-broker-icon {
+  width: 20%;
+}
+.king-broker .king-broker-row .king-broker-col .king-broker-icon img {
+  width: 100%;
+}
+.king-broker .king-broker-row .king-broker-col .king-broker-text {
+  margin-left: 2rem;
+  width: 80%;
+}
+.king-broker .king-broker-row .king-broker-col .king-broker-text .king-broker-text-title span {
+  font-size: 1.5rem;
+  background-image: linear-gradient(to right, #debe44 0%, #d7ac2a 40%, #c8a52c 60%, #d4cf69 100%);
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+.king-broker .king-broker-row .king-broker-col .king-broker-text .king-broker-text-desc {
+  text-align: justify;
+  word-spacing: 0.1rem;
+  font-size: 1rem;
+}
+
+.king-footer {
+  background-color: #191919;
+  padding: 1.5rem;
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+  .king-header .navbar {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .king-header .navbar .navbar-brand img {
+    width: 50%;
+  }
+  .king-header .navbar-nav li a {
+    color: #f0d088;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .king-banner .king-banner-text {
+    left: 2rem;
+    top: 7rem;
+    clear: both;
+    width: 75%;
+  }
+
+  .king-banner-static {
+    height: auto;
+    width: 100%;
+    position: static;
+    @apply grid grid-cols-1 gap-2;
+  }
+  .king-banner-static .king-col-static {
+    border-right: 1px solid #f0d088;
+    text-align: center;
+    margin-top: 25px;
+    line-height: 35px;
+  }
+  .king-banner-static .king-col-static .static-number span {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ab7a03;
+    line-height: 25px;
+  }
+  .king-banner-static .king-col-static .static-tetx {
+    color: #fcf9cc;
+    font-size: 1.6rem;
+  }
+  .king-banner-static .king-col-static:last-child {
+    border-right: none;
+  }
+
+  .king-reason {
+    height: auto;
+    margin-top: 1rem;
+  }
+  .king-reason .king-reason-logo {
+    text-align: center;
+    padding-top: 1.7rem;
+    padding-bottom: 1.7rem;
+  }
+  .king-reason .king-reason-logo img {
+    width: 40%;
+  }
+  .king-reason .king-reason-row {
+    @apply grid grid-cols-1 gap-2;
+  }
+
+  .king-platforms .king-platform-feature {
+    height: auto;
+    width: 95%;
+    margin: 0 1rem;
+  }
+  .king-platforms .king-platform-feature .king-platforms-feature-title {
+    text-align: center;
+  }
+  .king-platforms .king-platform-feature .king-platforms-feature-title span {
+    font-size: 1.6rem;
+    background-image: linear-gradient(to right, #dcb83b 0%, #d7aa28 40%, #ca9c1a 60%, #caaa34 100%);
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    font-weight: bold;
+  }
+  .king-platforms .king-platform-feature .king-feature-row {
+    @apply grid grid-cols-1;
+  }
+  .king-platforms .king-platform-feature .king-feature-row .king-feature-col {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: none;
+  }
+  .king-platforms .king-platform-feature .king-feature-row .king-feature-col .king-feature-col-text span {
+    font-size: 1rem;
+  }
+  .king-platforms .king-platform-feature .king-feature-row .king-feature-col .king-feature-col-icon {
+    text-align: center;
+  }
+  .king-platforms .king-platform-feature .king-feature-row .king-feature-col .king-feature-col-icon img {
+    width: 10%;
+    margin: 0 auto;
+  }
+  .king-platforms .king-platform-device {
+    @apply grid grid-cols-3 gap-4;
+    margin-top: 20px;
+  }
+  .king-platforms .king-platform-device img {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .king-option .king-option-row {
+    @apply grid grid-cols-1 gap-2;
+  }
+  .king-option .king-option-row .king-option-left img {
+    width: 100%;
+  }
+  .king-option .king-option-row .king-option-right {
+    padding: 3rem;
+  }
+  .king-option .king-option-row .king-option-right .king-option-right-title {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .king-option .king-option-row .king-option-right .king-option-right-title span:first-child {
+    font-size: 2rem;
+    color: #e8b12a;
+    font-weight: bold;
+    word-spacing: 1.3rem;
+  }
+  .king-option .king-option-row .king-option-right .king-option-right-title span:last-child {
+    font-size: 3.5rem;
+    color: #e8b12a;
+    font-weight: bold;
+  }
+  .king-option .king-option-row .king-option-right .king-option-right-row .king-option-right-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+  }
+  .king-option .king-option-row .king-option-right .king-option-right-row .king-option-right-col .option-right-col-img img {
+    width: 100%;
+  }
+  .king-option .king-option-row .king-option-right .king-option-right-row .king-option-right-col .option-right-col-text {
+    margin-left: 1.5rem;
+  }
+  .king-option .king-option-row .king-option-right .king-option-right-row .king-option-right-col .option-right-col-text .text-title span {
+    font-size: 25px;
+    color: #f0d088;
+  }
+  .king-option .king-option-row .king-option-right .king-option-right-row .king-option-right-col .option-right-col-text .text-desc {
+    font-size: 20px;
+  }
+
+  .king-broker .king-broker-row {
+    @apply grid grid-cols-1 gap-2;
+  }
+
+  .king-ready {
+    height: auto;
+  }
+  .king-ready .king-ready-title {
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .king-ready .king-ready-title span {
+    font-size: 3rem;
+    font-weight: bold;
+    background-image: linear-gradient(to right, #debe44 0%, #d7ac2a 40%, #c8a52c 60%, #d4cf69 100%);
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+  }
+  .king-ready .king-ready-col {
+    display: grid;
+    justify-content: space-between;
+    align-items: baseline;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .king-ready .king-ready-col .king-ready-icon img {
+    width: 18%;
+  }
+  .king-ready .king-ready-col .king-ready-icon .king-ready-text span {
+    font-size: 2rem;
+    background-image: linear-gradient(to right, #dcb83b 0%, #d7aa28 40%, #ca9c1a 60%, #caaa34 100%);
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+  }
+  .king-ready .king-ready-col .king-ready-icon .king-ready-text p {
+    font-size: 1rem;
+    color: white;
+  }
+  .king-ready .king-ready-button {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .king-ready .king-ready-button button {
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 2.25rem !important;
+    padding: 1rem 2rem;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    background: linear-gradient(to bottom, #e0bb4c 0%, #fff6a2 40%, #fff6a2 60%, #e0bb4c 100%);
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  .king-banner .king-banner-text {
+    left: 2rem;
+    top: 10rem;
+    clear: both;
+    width: 75%;
+  }
+
+  .king-platforms .king-platform-feature {
+    height: auto;
+    width: 95%;
+    margin: 0 1rem;
+  }
+  .king-platforms .king-platform-feature .king-feature-row {
+    @apply grid grid-cols-2 gap-3;
+  }
+  .king-platforms .king-platform-device {
+    @apply grid grid-cols-3 gap-4;
+    margin-top: 20px;
+  }
+  .king-platforms .king-platform-device img {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .king-option .king-option-row .king-option-right .king-option-right-title span:first-child {
+    font-size: 2rem;
+    color: #e8b12a;
+    font-weight: bold;
+    word-spacing: 1.3rem;
+  }
+  .king-option .king-option-row .king-option-right .king-option-right-title span:last-child {
+    font-size: 3rem;
+    color: #e8b12a;
+    font-weight: bold;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 1024px) {
+  .king-header .navbar {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .king-header .navbar .navbar-brand img {
+    width: 30%;
+  }
+  .king-header .navbar-nav li a {
+    color: #f0d088;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .king-banner .king-banner-text {
+    left: 2rem;
+    top: 12rem;
+    clear: both;
+    width: 75%;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
 
 /*# sourceMappingURL=style.css.map */

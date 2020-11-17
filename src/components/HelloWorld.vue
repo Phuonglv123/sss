@@ -1,27 +1,98 @@
 <template>
-  <div class="hello">
-    <div class="bg-gray-50">
-      <div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
-        <h2 class="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
-          <span class="text-indigo-600">{{ msg }}</span>
-        </h2>
-        <div class="mt-8 flex lg:flex-shrink-0 lg:mt-0">
-          <div class="inline-flex rounded-md shadow">
-            <a href="https://medium.com/@horaceh/how-to-setup-a-tailwind-css-tailwind-ui-project-with-vue-cli-fdc671d69e48" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
-              How to
-            </a>
-          </div>
-          <div class="ml-3 inline-flex rounded-md shadow">
-            <a href="https://github.com/horaceho/vue-tailwind-skeleton" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-indigo-600 bg-white hover:text-indigo-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
-              Github
-            </a>
-          </div>
-        </div>
+  <div class="king-broker-col">
+    <div class="king-broker-icon">
+      <img src="./assets/icon-broker5.png" alt="">
+    </div>
+    <div class="king-broker-text">
+      <div class="king-broker-text-title">
+        <span>Globally Renowned</span>
+      </div>
+      <div class="king-broker-text-desc">
+        <p>
+          We have clients from over 196 countries and staff speaking over 30 languages. Our
+          management has visited over 120 cities globally to understand clients' and partners'
+          needs.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="king-broker-col">
+    <div class="king-broker-icon">
+      <img src="./assets/icon-broker2.png" alt="">
+    </div>
+    <div class="king-broker-text">
+      <div class="king-broker-text-title">
+        <span>Focused on the Client</span>
+      </div>
+      <div class="king-broker-text-desc">
+        <p>
+          Size does not matter. At XM the client comes first regardless of net capital worth,
+          account type or size of investment. All our clients receive the same quality
+          services, the same execution, and the same level of support. XM was founded on these
+          values, and that will not change.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="king-broker-col">
+    <div class="king-broker-icon">
+      <img src="./assets/icon-broker4.png" alt="">
+    </div>
+    <div class="king-broker-text">
+      <div class="king-broker-text-title">
+        <span>Range of Trading Instruments</span>
+      </div>
+      <div class="king-broker-text-desc">
+        <p>
+          Our clients can choose to trade forex and CFDS on stock indices, commodities,
+          stocks, metals and energies from the same trading account. With a wide range of
+          trading instruments available from a single multi asset platform XM makes trading
+          easier and efficient.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="king-broker-col">
+    <div class="king-broker-icon">
+      <img src="./assets/icon-broker4.png" alt="">
+    </div>
+    <div class="king-broker-text">
+      <div class="king-broker-text-title">
+        <span>Range of Trading Instruments</span>
+      </div>
+      <div class="king-broker-text-desc">
+        <p>
+          At XM what you see is what you get, with no hidden terms. Be that pricing, execution
+          or pro- motions. What we advertise is what we give our clients, regardless of the
+          size of their investment.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="king-broker-col">
+    <div class="king-broker-icon">
+      <img src="./assets/icon-broker6.png" alt="">
+    </div>
+    <div class="king-broker-text">
+      <div class="king-broker-text-title">
+        <span>Easy and Convenient</span>
+      </div>
+      <div class="king-broker-text-desc">
+        <p>
+          All our systems are built and updated with the client in mind. Starting from our
+          account opening procedure, to managing your account, depositing or withdrawing funds
+          and finally trading, it's all straightforward simple and easy to use for all our
+          clients.
+        </p>
       </div>
     </div>
   </div>
 </template>
-
 <script>
 export default {
   name: 'HelloWorld',
