@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+a {
+  @apply text-white;
+}
+
+/*# sourceMappingURL=style.css.map */
