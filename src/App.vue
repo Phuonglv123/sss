@@ -2,21 +2,20 @@
   <div id="app">
     <div class="wrapper">
       <header class="king-header" :class="isOpen ?'bg-black': 'bg-transparent'">
-        <nav class="flex items-center justify-between flex-wrap  p-6">
-          <div class="flex items-center flex-shrink-0 text-white mr-6 king-logo">
-            <img class="fill-current mr-2" src="./assets/logo-king.png" alt="">
+        <nav class="king-nav">
+          <div class="king-logo">
+            <img src="./assets/logo-king.png" alt="">
           </div>
-          <div class="block lg:hidden">
+          <div class="button-responsive">
             <button
-                @click="isOpen = !isOpen"
-                class="flex items-center px-3 py-2 border rounded text-yellow-500 border-yellow-400 hover:text-white hover:border-white">
+                @click="isOpen = !isOpen">
               <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>
                 Menu</title>
                 <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
               </svg>
             </button>
           </div>
-          <div :class="isOpen ? 'block' : 'hidden'" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+          <div :class="isOpen ? 'block' : 'hidden'" class=" w-full block flex-grow lg:flex lg:items-center lg:w-auto">
             <div class="text-sm lg:flex-grow">
             </div>
             <div>
@@ -103,7 +102,7 @@
       <!--===================== End of Banner ========================-->
       <!--===================== Reasons Block ========================-->
       <div class="king-reason">
-        <div class="container">
+        <div class="king-container">
           <div class="king-reason-logo">
             <img src="./assets/logo-king.png" alt="">
           </div>
@@ -316,7 +315,7 @@
       <!--===================== End of king option Block ========================-->
       <!--===================== King Ready ========================-->
       <div class="king-ready">
-        <div class="container">
+        <div class="king-container-ready">
           <div class="king-ready-title">
             <span>Ready to TRADE?</span>
           </div>
@@ -360,7 +359,7 @@
       <!--===================== End of King Ready ========================-->
       <!--===================== King Broker ========================-->
       <div class="king-broker">
-        <div class="container">
+        <div class="king-container-broker">
           <div class="king-broker-title">
             <span>Choose a Big, Fair and Human Broker. </span>
           </div>

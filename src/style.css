@@ -13,8 +13,51 @@
   top: 0;
   z-index: 9;
 }
-.king-header .king-logo img {
+.king-header .king-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  flex-wrap: wrap;
+}
+.king-header .king-nav .king-logo {
+  display: flex;
+}
+.king-header .king-nav .king-logo img {
   width: 200px;
+  margin-right: 2.5rem;
+}
+.king-header .king-nav .button-responsive {
+  display: block;
+}
+.king-header .king-nav .button-responsive button {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+  border-width: 1px;
+  border-radius: 0.25rem;
+  color: #ecc94b;
+}
+.king-header .king-nav .button-responsive button:hover {
+  color: white;
+  border-color: white;
+}
+@screen lg {
+  .king-header .king-nav .button-responsive {
+    display: none;
+  }
+}
+.king-header .king-nav .king-link-group {
+  width: 100%;
+  flex-grow: 1;
+  display: block;
+}
+@creen lg {
+  .king-header .king-nav .king-link-group {
+    display: flex;
+    align-items: center;
+    width: auto;
+  }
 }
 
 .king-banner {
@@ -77,23 +120,49 @@
   background-origin: border-box;
   background-clip: content-box, border-box;
   border-radius: 20px;
-  height: 150px;
+  height: auto;
   color: white;
   background-color: #191919;
-  bottom: 0;
+  bottom: 1.5rem;
   left: 0;
   right: 0;
   padding: 2px;
-  width: 80%;
+  width: 90%;
   margin-right: auto;
   margin-left: auto;
-  @apply grid grid-cols-4 gap-5;
+  display: flex;
+}
+@screen xs {
+  .king-banner-static {
+    position: static;
+    width: 100%;
+    display: grid;
+  }
+}
+@screen md {
+  .king-banner-static {
+    width: 95%;
+    display: flex;
+    position: absolute;
+  }
 }
 .king-banner-static .king-col-static {
   border-right: 1px solid #f0d088;
   text-align: center;
-  margin-top: 25px;
-  line-height: 35px;
+  padding: 1rem;
+  width: 25%;
+}
+@screen xs {
+  .king-banner-static .king-col-static {
+    width: 100%;
+    border-right: none;
+  }
+}
+@screen md {
+  .king-banner-static .king-col-static {
+    width: 25%;
+    border-right: 1px solid #f0d088;
+  }
 }
 .king-banner-static .king-col-static .static-number span {
   font-size: 30px;
@@ -114,25 +183,75 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
   clear: both;
 }
-.king-reason .container {
-  margin: 0 auto;
+@screen xs {
+  .king-reason {
+    height: auto;
+    margin-top: 0;
+  }
 }
-.king-reason .king-reason-logo {
+@screen lg {
+  .king-reason {
+    height: 100vh;
+  }
+}
+.king-reason .king-container {
+  margin: 0 auto;
+  width: 90%;
+}
+.king-reason .king-container .king-reason-logo {
   text-align: center;
-  padding-top: 6em;
-  padding-bottom: 3em;
 }
-.king-reason .king-reason-logo img {
-  width: 350px;
-  margin: 0 auto;
+@screen xs {
+  .king-reason .king-container .king-reason-logo {
+    text-align: center;
+    padding-top: 1.7rem;
+    padding-bottom: 1.7rem;
+  }
 }
-.king-reason .king-reason-row {
-  @apply grid grid-cols-3 gap-4;
+@screen md {
+  .king-reason .king-container .king-reason-logo {
+    padding-top: 5.5rem;
+  }
 }
-.king-reason .king-reason-row .king-reason-col {
+@screen lg {
+  .king-reason .king-container .king-reason-logo {
+    padding-top: 8em;
+    padding-bottom: 3em;
+  }
+}
+.king-reason .king-container .king-reason-logo img {
+  width: 20%;
+}
+@screen xs {
+  .king-reason .king-container .king-reason-logo img {
+    width: 40%;
+    margin: 0 auto;
+  }
+}
+@screen lg {
+  .king-reason .king-container .king-reason-logo img {
+    width: 30%;
+    margin: 0 auto;
+  }
+}
+@screen xs {
+  .king-reason .king-container .king-reason-row {
+    @apply grid grid-cols-1 gap-4;
+  }
+}
+@screen md {
+  .king-reason .king-container .king-reason-row {
+    @apply grid grid-cols-3 gap-4;
+  }
+}
+@screen lg {
+  .king-reason .king-container .king-reason-row {
+    @apply grid grid-cols-3 gap-4;
+  }
+}
+.king-reason .king-container .king-reason-row .king-reason-col {
   background-image: url("./assets/backgroud-reason-col.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -144,10 +263,10 @@
   align-items: center;
   border-radius: 10px;
 }
-.king-reason .king-reason-row .king-reason-col .king-reason-icon img {
+.king-reason .king-container .king-reason-row .king-reason-col .king-reason-icon img {
   width: 60%;
 }
-.king-reason .king-reason-row .king-reason-col .king-reason-text span {
+.king-reason .king-container .king-reason-row .king-reason-col .king-reason-text span {
   font-size: 1rem;
   font-weight: bold;
 }
@@ -219,25 +338,31 @@
 }
 .king-platforms .king-platform-feature .king-feature-row {
   @apply grid grid-cols-4 gap-5;
+  padding-left: 1.25rem;
 }
 .king-platforms .king-platform-feature .king-feature-row .king-feature-col {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   border-right: 1px solid #f0d088;
-  margin-top: 15px;
+  padding: 0.25rem;
 }
 .king-platforms .king-platform-feature .king-feature-row .king-feature-col:last-child {
   border-right: none;
+}
+.king-platforms .king-platform-feature .king-feature-row .king-feature-col .king-feature-col-text {
+  width: 80%;
+  margin-left: 1.25rem;
 }
 .king-platforms .king-platform-feature .king-feature-row .king-feature-col .king-feature-col-text span {
   font-size: 1rem;
 }
 .king-platforms .king-platform-feature .king-feature-row .king-feature-col .king-feature-col-icon {
   text-align: center;
+  width: 20%;
 }
 .king-platforms .king-platform-feature .king-feature-row .king-feature-col .king-feature-col-icon img {
-  width: 40%;
+  width: 100%;
 }
 .king-platforms .king-platform-device {
   display: flex;
@@ -305,8 +430,9 @@
   background-size: cover;
   height: 100vh;
 }
-.king-ready .container {
+.king-ready .king-container-ready {
   margin: 0 auto;
+  width: 90%;
 }
 .king-ready .king-ready-title {
   text-align: center;
@@ -375,8 +501,9 @@
   background: linear-gradient(to bottom, #e0bb4c 0%, #fff6a2 40%, #fff6a2 60%, #e0bb4c 100%);
 }
 
-.king-broker .container {
+.king-broker .king-container-broker {
   margin: 0 auto;
+  width: 90%;
 }
 .king-broker .king-broker-title {
   text-align: center;
@@ -461,12 +588,6 @@
     width: 75%;
   }
 
-  .king-banner-static {
-    height: auto;
-    width: 100%;
-    position: static;
-    @apply grid grid-cols-1 gap-2;
-  }
   .king-banner-static .king-col-static {
     border-right: 1px solid #f0d088;
     text-align: center;
@@ -485,22 +606,6 @@
   }
   .king-banner-static .king-col-static:last-child {
     border-right: none;
-  }
-
-  .king-reason {
-    height: auto;
-    margin-top: 1rem;
-  }
-  .king-reason .king-reason-logo {
-    text-align: center;
-    padding-top: 1.7rem;
-    padding-bottom: 1.7rem;
-  }
-  .king-reason .king-reason-logo img {
-    width: 40%;
-  }
-  .king-reason .king-reason-row {
-    @apply grid grid-cols-1 gap-2;
   }
 
   .king-platforms .king-platform-feature {
