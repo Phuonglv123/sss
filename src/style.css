@@ -26,6 +26,7 @@
 .king-header .king-nav .king-logo img {
   width: 200px;
   margin-right: 2.5rem;
+  height: 4rem;
 }
 .king-header .king-nav .button-responsive {
   display: block;
@@ -507,17 +508,15 @@
 }
 .king-broker .king-broker-title {
   text-align: center;
-}
-.king-broker .king-broker-title span {
-  font-size: 2.5rem;
-  font-weight: bold;
-  word-spacing: 1rem;
   background-image: linear-gradient(to right, #debe44 0%, #d7ac2a 40%, #c8a52c 60%, #d4cf69 100%);
   background-repeat: repeat;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
+  font-size: 2.5rem;
+  font-weight: bold;
+  word-spacing: 1rem;
 }
 .king-broker .king-broker-desc {
   text-align: center;
@@ -642,7 +641,7 @@
     text-align: center;
   }
   .king-platforms .king-platform-feature .king-feature-row .king-feature-col .king-feature-col-icon img {
-    width: 10%;
+    width: 100%;
     margin: 0 auto;
   }
   .king-platforms .king-platform-device {

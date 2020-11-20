@@ -361,7 +361,7 @@
       <div class="king-broker">
         <div class="king-container-broker">
           <div class="king-broker-title">
-            <span>Choose a Big, Fair and Human Broker. </span>
+            <div>Choose a Big, Fair and Human Broker. </div>
           </div>
           <div class="king-broker-desc">
             <p>There us a reason why over 3.5 Million Client Choose ACB for Forex Trading, Stock Indices
